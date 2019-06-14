@@ -156,6 +156,11 @@ demonstration_variable
 ~~~
 {: .output}
 
+Now, `demonstration_variable` seems like a very long variable name, but the nice thing about R and RStudio, 
+is it uses tab complete. This means, I can start typing the first few letters, and it will complete the 
+variable name when I press the tab key.  This is important, because variable names should be descriptive.
+I could just use a variable name of `x`, but that's not very descriptive of what the variable actually represents.
+
 Variable names can contain letters, numbers, underscores and periods. They
 cannot start with a number nor contain spaces at all. Different people use
 different conventions for long variable names, these include
