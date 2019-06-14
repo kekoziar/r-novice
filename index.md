@@ -5,15 +5,6 @@ root: .
 
 *An introduction to R for non-programmers using gapminder data*
 
-Science is a multi-step process: once you've designed an experiment and collected
-data, the real fun begins! This lesson will teach you how to start this process using
-R and RStudio. We will begin with raw data, perform exploratory analyses, and learn
-how to plot results graphically. This example starts with a dataset containing population 
-information for many countries through time. Can you read the data into R? Can you plot the 
-population for Senegal? Can you calculate the average income for countries on the continent of Asia?
-By the end of this lesson you will be able to do things like plot the populations
-for all of these countries in under a minute!
-
 The goal of this lesson is to teach novice programmers to write modular code
 and best practices for using R for data analysis. R is commonly used in many
 scientific disciplines for statistical analysis and its array of third-party
