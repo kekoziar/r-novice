@@ -312,7 +312,7 @@ x <- 1:5
 ~~~
 {: .output}
 
-You can also use the combine function `c()` combine items separated by commas
+You can also use the combine function `c()` to combine items separated by commas.
 
 ~~~
 x <- c(1:5, 10:15)
