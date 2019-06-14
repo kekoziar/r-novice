@@ -11,20 +11,13 @@ questions:
 - "How to install packages?"
 objectives:
 - "Describe the purpose and use of each pane in the RStudio IDE"
-- "Locate buttons and options in the RStudio IDE"
 - "Define a variable"
 - "Assign data to a variable"
-- "Manage a workspace in an interactive R session"
-- "Use mathematical and comparison operators"
 - "Call functions"
 - "Manage packages"
 keypoints:
 - "Use RStudio to write and run R programs."
-- "R has the usual arithmetic operators and mathematical functions."
 - "Use `<-` to assign values to variables."
-- "Use `ls()` to list the variables in a program."
-- "Use `rm()` to delete objects in a program."
-- "Use `install.packages()` to install packages (libraries)."
 source: Rmd
 ---
 
@@ -421,64 +414,5 @@ or <kbd>&#8984;</kbd>+<kbd>Return</kbd> on OS X.
 > > {: .language-r}
 > > This will subtract 20 from the existing value of 122 to give a new value
 > > of 102 to the variable age.
-> {: .solution}
-{: .challenge}
-
-
-> ## Challenge 3
->
-> Run the code from the previous challenge, and write a command to
-> compare mass to age. Is mass larger than age?
->
-> > ## Solution to challenge 3
-> >
-> > One way of answering this question in R is to use the `>` to set up the following:
-> > 
-> > ~~~
-> > mass > age
-> > ~~~
-> > {: .language-r}
-> > 
-> > 
-> > 
-> > ~~~
-> > [1] TRUE
-> > ~~~
-> > {: .output}
-> > This should yield a boolean value of TRUE since 109.25 is greater than 102.
-> {: .solution}
-{: .challenge}
-
-
-> ## Challenge 4
->
-> Clean up your working environment by deleting the mass and age
-> variables.
->
-> > ## Solution to challenge 4
-> >
-> > We can use the `rm` command to accomplish this task
-> > 
-> > ~~~
-> > rm(age, mass)
-> > ~~~
-> > {: .language-r}
-> {: .solution}
-{: .challenge}
-
-> ## Challenge 5
->
-> Install the following packages: `ggplot2`, `plyr`, `gapminder`
->
-> > ## Solution to challenge 5
-> >
-> > We can use the `install.packages()` command to install the required packages.
-> > 
-> > ~~~
-> > install.packages("ggplot2")
-> > install.packages("plyr")
-> > install.packages("gapminder")
-> > ~~~
-> > {: .language-r}
 > {: .solution}
 {: .challenge}
