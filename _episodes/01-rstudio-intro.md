@@ -357,7 +357,7 @@ Once you're in an .R file, you can use RStudio's short cut keys for the Run comm
 to push the current line, selected lines or modified lines to the
 interactive R console. Put the cursor on the line of code you want to run, or select 
 the lines of code, and press <kbd>Ctrl</kbd>+<kbd>Return</kbd> in Windows or Linux 
-> or <kbd>&#8984;</kbd>+<kbd>Return</kbd> on OS X.
+or <kbd>&#8984;</kbd>+<kbd>Return</kbd> on OS X.
 
 > ## Tip: Running segments of your code
 >
