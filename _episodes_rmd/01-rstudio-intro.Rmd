@@ -136,18 +136,18 @@ We store values in variables using the assignment operator, which looks like an 
 
 
 ~~~
-x <- 1/40
+demonstration_variable <- 1/40
 ~~~
 {: .language-r}
 
 Notice that assignment does not print a value. Instead, it is stored for later
-use. `x` now contains the **value** `0.025`:
+use. `demonstration_variable` now contains the **value** `0.025`:
 
-If you look at the `Environment` tab in the top right panes, you will see  `x` 
-and its value have appeared. And we can show output of `x` by typing it in the console:
+If you look at the `Environment` tab in the top right panes, you will see  `demonstration_variable` 
+and its value have appeared. And we can show output of `demonstration_variable` by typing it in the console:
 
 ~~~
-x
+demonstration_variable
 ~~~
 {: .language-r}
 
@@ -168,11 +168,11 @@ What you use is up to you, but **be consistent**.
 
 
 
-Back to our variable `x`.  
+Back to our variable `demonstration_variable`.  
 Variables can be used in place of a number in any calculation that expects a number:
 
 ~~~
-log(x)
+log(demonstration_variable)
 ~~~
 {: .language-r}
 
@@ -186,7 +186,7 @@ Notice also that variables can be reassigned:
 
 
 ~~~
-x <- 100000
+demonstration_variable <- 100000
 ~~~
 {: .language-r}
 
@@ -205,7 +205,7 @@ mol<-6.022e23
 {: .language-r}
 
 ~~~
-[1] 1e+05
+[1] 6.022e+23
 ~~~
 {: .output}
 
@@ -213,8 +213,8 @@ Assignment values can contain the variable being assigned to:
 
 
 ~~~
-x <- x + 1 #notice how RStudio updates its description of x on the top right tab
-y <- x * 2
+demonstration_variable <- demonstration_variable + 1 #notice how RStudio updates its description of x on the top right tab
+y <- demonstration_variable * 2
 ~~~
 {: .language-r}
 
@@ -225,7 +225,7 @@ It is also possible to use the `=` operator for assignment:
 
 
 ~~~
-x = 1/40
+demonstration_variable = 1/40
 ~~~
 {: .language-r}
 
