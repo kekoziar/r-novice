@@ -8,13 +8,11 @@ questions:
 - "How to find your way around RStudio?"
 - "How to interact with R?"
 - "How to manage your environment?"
-- "How to install packages?"
 objectives:
 - "Describe the purpose and use of each pane in the RStudio IDE"
 - "Define a variable"
 - "Assign data to a variable"
 - "Call functions"
-- "Manage packages"
 keypoints:
 - "Use RStudio to write and run R programs."
 - "Use `<-` to assign values to variables."
@@ -149,7 +147,8 @@ demonstration_variable
 Now, `demonstration_variable` seems like a very long variable name, but the nice thing about R and RStudio, 
 is it uses tab complete. This means, I can start typing the first few letters, and it will complete the 
 variable name when I press the tab key.  This is important, because variable names should be descriptive.
-I could just use a variable name of `x`, but that's not very descriptive of what the variable actually represents.
+I could just use a variable name of `x` or even `banana`, but those are not descriptive 
+of what the variable actually represents.
 
 Variable names can contain letters, numbers, underscores and periods. They
 cannot start with a number nor contain spaces at all. Different people use
