@@ -28,6 +28,12 @@ keypoints:
 source: Rmd
 ---
 
+
+Welcome to the R deep dive, or I should say shallow wade because R is a pretty big 
+topic, and we won’t get far in the time we have.  I am following a modified 
+Carpentries lesson that will introduce R and RStudio, how to work in 
+R to read, store, manipulate, and save data. 
+
 ## Introduction to R and RStudio
 Welcome to R.  First, what is R?  What is RStudio?  And, How are they different?
 R is a language and environment for statistical computing and 
@@ -36,9 +42,9 @@ IDE (or integrated development environment) for R.
 RStudio basically provides a nicer interface to develop in R. RStudio also
 has other advantages such as integration with version control and project management.
 
-Throughout this lesson, we're going to teach you some of the fundamentals of
-the R language as well as some best practices for organizing code for
-scientific projects that will make your life easier.
+Throughout this lesson, we’re going to teach you some of the fundamentals of the R 
+language as well as some best practices for organizing coding projects 
+that will make your life easier.
 
 ## Navigating RStudio
 
@@ -52,41 +58,6 @@ When you first open RStudio, you will be greeted by three panels:
 
 ![RStudio layout](../fig/01-rstudio.png)
 
-Once you open files, such as R scripts, an editor panel will also open
-in the top left.
-
-![RStudio layout with .R file open](../fig/01-rstudio-script.png)
-
-
-## Work flow within RStudio
-There are two main ways one can work within RStudio.
-
-1. Test and play within the interactive R console then copy code into
-an .R file to save and run later.
-   *  This works well when doing small tests and initially starting off.
-   *  It becomes laborous as your code grows and becomes complex.
-2. Start writing in an .R file and use RStudio's short cut keys for the Run command
-to push the current line, selected lines or modified lines to the
-interactive R console.
-   * This is a great way to start; all your code is saved for later
-   * You will be able to run the file you create from within RStudio.
-
-> ## Tip: Running segments of your code
->
-> RStudio offers you great flexibility in running code from within the editor
-> window. There are buttons, menu choices, and keyboard shortcuts. To run the
-> current line, you can 
-> 1. click on the `Run` button above the editor panel, or 
-> 2. select "Run Lines" from the "Code" menu, or 
-> 3. hit <kbd>Ctrl</kbd>+<kbd>Return</kbd> in Windows or Linux 
-> or <kbd>&#8984;</kbd>+<kbd>Return</kbd> on OS X.
-> (This shortcut can also be seen by hovering
-> the mouse over the button). To run a block of code, select it and then `Run`.
-> If you have modified a line of code within a block of code you have just run,
-> there is no need to reselect the section and `Run`, you can use the next button
-> along, `Re-run the previous region`. This will run the previous code block
-> including the modifications you have made.
-{: .callout}
 
 ## Introduction to R
 
@@ -364,134 +335,40 @@ This is incredibly powerful; we will discuss this further in an
 upcoming lesson.
 
 
-## Managing your environment
+Once you open files, such as R scripts, an editor panel will also open
+in the top left.
 
-There are a few useful commands you can use to interact with the R session.
-
-`ls` will list all of the variables and functions stored in the global environment
-(your working R session):
+![RStudio layout with .R file open](../fig/01-rstudio-script.png)
 
 
-~~~
-ls()
-~~~
-{: .language-r}
+## Work flow within RStudio
+There are two main ways one can work within RStudio.
 
+1. Test and play within the interactive R console then copy code into
+an .R file to save and run later.
+   *  This works well when doing small tests and initially starting off.
+   *  It becomes laborous as your code grows and becomes complex.
+2. Start writing in an .R file and use RStudio's short cut keys for the Run command
+to push the current line, selected lines or modified lines to the
+interactive R console.
+   * This is a great way to start; all your code is saved for later
+   * You will be able to run the file you create from within RStudio.
 
-
-~~~
-[1] "args"          "dest_md"       "missing_pkgs"  "required_pkgs"
-[5] "src_rmd"       "x"             "y"            
-~~~
-{: .output}
-
-> ## Tip: hidden objects
+> ## Tip: Running segments of your code
 >
-> Like in the shell, `ls` will hide any variables or functions starting
-> with a "." by default. To list all objects, type `ls(all.names=TRUE)`
-> instead
->
-{: .callout}
-
-Note here that we didn't give any arguments to `ls`, but we still
-needed to give the parentheses to tell R to call the function.
-
-If we type `ls` by itself, R will print out the source code for that function!
-
-
-~~~
-ls
-~~~
-{: .language-r}
-
-
-
-~~~
-function (name, pos = -1L, envir = as.environment(pos), all.names = FALSE, 
-    pattern, sorted = TRUE) 
-{
-    if (!missing(name)) {
-        pos <- tryCatch(name, error = function(e) e)
-        if (inherits(pos, "error")) {
-            name <- substitute(name)
-            if (!is.character(name)) 
-                name <- deparse(name)
-            warning(gettextf("%s converted to character string", 
-                sQuote(name)), domain = NA)
-            pos <- name
-        }
-    }
-    all.names <- .Internal(ls(envir, all.names, sorted))
-    if (!missing(pattern)) {
-        if ((ll <- length(grep("[", pattern, fixed = TRUE))) && 
-            ll != length(grep("]", pattern, fixed = TRUE))) {
-            if (pattern == "[") {
-                pattern <- "\\["
-                warning("replaced regular expression pattern '[' by  '\\\\['")
-            }
-            else if (length(grep("[^\\\\]\\[<-", pattern))) {
-                pattern <- sub("\\[<-", "\\\\\\[<-", pattern)
-                warning("replaced '[<-' by '\\\\[<-' in regular expression pattern")
-            }
-        }
-        grep(pattern, all.names, value = TRUE)
-    }
-    else all.names
-}
-<bytecode: 0x2296ff0>
-<environment: namespace:base>
-~~~
-{: .output}
-
-You can use `rm` to delete objects you no longer need:
-
-
-~~~
-rm(x)
-~~~
-{: .language-r}
-
-If you have lots of things in your environment and want to delete all of them,
-you can pass the results of `ls` to the `rm` function:
-
-
-~~~
-rm(list = ls())
-~~~
-{: .language-r}
-
-In this case we've combined the two. Like the order of operations, anything
-inside the innermost parentheses is evaluated first, and so on.
-
-In this case we've specified that the results of `ls` should be used for the
-`list` argument in `rm`. When assigning values to arguments by name, you *must*
-use the `=` operator!!
-
-If instead we use `<-`, there will be unintended side effects, or you may get an error message:
-
-
-~~~
-rm(list <- ls())
-~~~
-{: .language-r}
-
-
-
-~~~
-Error in rm(list <- ls()): ... must contain names or character strings
-~~~
-{: .error}
-
-> ## Tip: Warnings vs. Errors
->
-> Pay attention when R does something unexpected! Errors, like above,
-> are thrown when R cannot proceed with a calculation. Warnings on the
-> other hand usually mean that the function has run, but it probably
-> hasn't worked as expected.
->
-> In both cases, the message that R prints out usually give you clues
-> how to fix a problem.
->
+> RStudio offers you great flexibility in running code from within the editor
+> window. There are buttons, menu choices, and keyboard shortcuts. To run the
+> current line, you can 
+> 1. click on the `Run` button above the editor panel, or 
+> 2. select "Run Lines" from the "Code" menu, or 
+> 3. hit <kbd>Ctrl</kbd>+<kbd>Return</kbd> in Windows or Linux 
+> or <kbd>&#8984;</kbd>+<kbd>Return</kbd> on OS X.
+> (This shortcut can also be seen by hovering
+> the mouse over the button). To run a block of code, select it and then `Run`.
+> If you have modified a line of code within a block of code you have just run,
+> there is no need to reselect the section and `Run`, you can use the next button
+> along, `Re-run the previous region`. This will run the previous code block
+> including the modifications you have made.
 {: .callout}
 
 ## R Packages
