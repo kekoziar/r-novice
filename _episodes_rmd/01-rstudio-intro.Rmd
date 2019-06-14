@@ -132,7 +132,7 @@ start using variables.
 
 ## Variables and assignment
 
-We store values in variables using the assignment operator, which looks like an arrow `<-`:
+We store values in variables using the assignment operator, which looks like an arrow pointing to the left `<-`:
 
 
 ~~~
