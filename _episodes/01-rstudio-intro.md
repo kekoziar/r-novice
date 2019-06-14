@@ -335,14 +335,31 @@ x <- 1:5
 This is incredibly powerful; we will discuss this further in an
 upcoming lesson.
 
+## Saving Your Code
 
+The console is nice to work out and test single lines of code, but for you need a place
+to save your code, and that would be in a script file.  
 Once you open files, such as R scripts, an editor panel will also open
 in the top left.
 
 ![RStudio layout with .R file open](../fig/01-rstudio-script.png)
 
 
-## Work flow within RStudio
+## Setting Up Your Workspace
+A good first line for your script is to set the working directory of the script to the 
+project folder.  This will allow you to access your data and print results using a 
+relational path instead of an absolute one.  This also helps your code become portable, 
+and sharable. 
+
+The first thing I am going to do is navigate to the directory where I want my project.
+
+Now, I will add to our script file `setwd("~/Desktop/IntroToR")`
+
+To save the file, I click `ctrl+s` and it prompts me to find a place to save it.  
+Navigating to the project folder, I'm going to add a few folders before I save it.
+`data` will contain all my data, `results` will contain results, and `src` will contain source 
+files.
+
 There are two main ways one can work within RStudio.
 
 1. Test and play within the interactive R console then copy code into
