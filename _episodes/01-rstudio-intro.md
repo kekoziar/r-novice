@@ -296,28 +296,10 @@ same data type. For example
 ~~~
 {: .language-r}
 
-
-
 ~~~
 [1] 1 2 3 4 5
 ~~~
 {: .output}
-
-
-
-~~~
-2^(1:5)
-~~~
-{: .language-r}
-
-
-
-~~~
-[1]  2  4  8 16 32
-~~~
-{: .output}
-
-
 
 ~~~
 x <- 1:5
@@ -325,12 +307,23 @@ x <- 1:5
 ~~~
 {: .language-r}
 
-
-
 ~~~
 [1]  2  4  8 16 32
 ~~~
 {: .output}
+
+You can also use the combine function `c()` combine items separated by commas
+
+~~~
+x <- c(1:5, 10:15)
+~~~
+{: .language-r}
+
+~~~
+[1]  1  2  3  4  5 10 11 12 13 14 15
+~~~
+{: .output}
+
 
 This is incredibly powerful; we will discuss this further in an
 upcoming lesson.
@@ -360,17 +353,11 @@ Navigating to the project folder, I'm going to add a few folders before I save i
 `data` will contain all my data, `results` will contain results, and `src` will contain source 
 files.
 
-There are two main ways one can work within RStudio.
-
-1. Test and play within the interactive R console then copy code into
-an .R file to save and run later.
-   *  This works well when doing small tests and initially starting off.
-   *  It becomes laborous as your code grows and becomes complex.
-2. Start writing in an .R file and use RStudio's short cut keys for the Run command
+Once you're in an .R file, you can use RStudio's short cut keys for the Run command
 to push the current line, selected lines or modified lines to the
-interactive R console.
-   * This is a great way to start; all your code is saved for later
-   * You will be able to run the file you create from within RStudio.
+interactive R console. Put the cursor on the line of code you want to run, or select 
+the lines of code, and press <kbd>Ctrl</kbd>+<kbd>Return</kbd> in Windows or Linux 
+> or <kbd>&#8984;</kbd>+<kbd>Return</kbd> on OS X.
 
 > ## Tip: Running segments of your code
 >
@@ -388,21 +375,6 @@ interactive R console.
 > along, `Re-run the previous region`. This will run the previous code block
 > including the modifications you have made.
 {: .callout}
-
-## R Packages
-
-It is possible to add functions to R by writing a package, or by
-obtaining a package written by someone else. As of this writing, there
-are over 10,000 packages available on CRAN (the comprehensive R archive
-network). R and RStudio have functionality for managing packages:
-
-* You can see what packages are installed by typing
-  `installed.packages()`
-* You can install packages by typing `install.packages("packagename")`,
-  where `packagename` is the package name, in quotes.
-* You can update installed packages by typing `update.packages()`
-* You can remove a package with `remove.packages("packagename")`
-* You can make a package available for use with `library(packagename)`
 
 > ## Challenge 2
 >
