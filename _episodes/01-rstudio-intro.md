@@ -122,8 +122,10 @@ The simplest thing you could do with R is do arithmetic:
 And R will print out the answer, with a preceding "[1]". Don't worry about this
 for now, we'll explain that later. For now think of it as indicating output.
 
-Like bash, if you type in an incomplete command, R will wait for you to
-complete it:
+Let's do another simple calculation, one plus... 
+
+Oops, I accidentally hit the enter key and, now what we see is the plus sign instead of a 
+greater than symbol. 
 
 ~~~
 > 1 +
@@ -135,8 +137,7 @@ complete it:
 ~~~
 {: .output}
 
-Any time you hit return and the R session shows a "+" instead of a ">", it
-means it's waiting for you to complete the command. If you want to cancel
+The plus sign means R is waiting for you to complete the command. If you want to cancel
 a command you can simply hit "Esc" and RStudio will give you back the ">"
 prompt.
 
@@ -156,6 +157,125 @@ prompt.
 When using R as a calculator, the order of operations is the same as you
 would have learned back in school.
 
+While math is fun, it's more fun to make the math reproducable, and in order to do that we need to 
+start using variables.  
+
+## Variables and assignment
+
+We store values in variables using the assignment operator, which looks like an arrow `<-`:
+
+
+~~~
+x <- 1/40
+~~~
+{: .language-r}
+
+Notice that assignment does not print a value. Instead, it is stored for later
+use. `x` now contains the **value** `0.025`:
+
+If you look at the `Environment` tab in the top right panes, you will see  `x` 
+and its value have appeared. And we can show output of `x` by typing it in the console:
+
+~~~
+x
+~~~
+{: .language-r}
+
+~~~
+[1] 0.025
+~~~
+{: .output}
+
+Variable names can contain letters, numbers, underscores and periods. They
+cannot start with a number nor contain spaces at all. Different people use
+different conventions for long variable names, these include
+
+  * periods.between.words
+  * underscores\_between_words
+  * camelCaseToSeparateWords
+
+What you use is up to you, but **be consistent**.
+
+
+
+Back to our variable `x`.  
+Variables can be used in place of a number in any calculation that expects a number:
+
+~~~
+log(x)
+~~~
+{: .language-r}
+
+
+~~~
+[1] -3.688879
+~~~
+{: .output}
+
+Notice also that variables can be reassigned:
+
+
+~~~
+x <- 100000
+~~~
+{: .language-r}
+
+~~~
+[1] 1e+05
+~~~
+{: .output}
+
+Which is shorthand for "multiplied by `10^XX`". So `1e05`
+is shorthand for `1 * 10^(5)`. You can also write and assign to variables numbers 
+in scientific notation
+
+~~~
+mol<-6.022e23
+~~~
+{: .language-r}
+
+~~~
+[1] 1e+05
+~~~
+{: .output}
+
+Assignment values can contain the variable being assigned to:
+
+
+~~~
+x <- x + 1 #notice how RStudio updates its description of x on the top right tab
+y <- x * 2
+~~~
+{: .language-r}
+
+The right hand side of the assignment can be any valid R expression.
+The right hand side is *fully evaluated* before the assignment occurs.
+
+Variable names can contain letters, numbers, underscores and periods. They
+cannot start with a number nor contain spaces at all. Different people use
+different conventions for long variable names, these include
+
+  * periods.between.words
+  * underscores\_between_words
+  * camelCaseToSeparateWords
+
+What you use is up to you, but **be consistent**.
+
+It is also possible to use the `=` operator for assignment:
+
+
+~~~
+x = 1/40
+~~~
+{: .language-r}
+
+But this is much less common among R users.  The most important thing is to
+**be consistent** with the operator you use. There are occasionally places
+where it is less confusing to use `<-` than `=`, and it is the most common
+symbol used in the community. So the recommendation is to use `<-`.
+
+=====================
+=====================
 From highest to lowest precedence:
 
  * Parentheses: `(`, `)`
@@ -419,6 +539,9 @@ We can also do comparison in R:
 > Further reading: [http://floating-point-gui.de/](http://floating-point-gui.de/)
 >
 {: .callout}
+
+=====================
+=====================
 
 ## Variables and assignment
 
