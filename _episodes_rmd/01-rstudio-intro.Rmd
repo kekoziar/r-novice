@@ -19,6 +19,11 @@ keypoints:
 source: Rmd
 ---
 
+```{r, include=FALSE}
+source("../bin/chunk-options.R")
+knitr_fig_path("01-")
+```
+
 Welcome to the R deep dive, or I should say shallow wade because R is a pretty big 
 topic, and we won’t get far in the time we have.  I am following a modified 
 Carpentries lesson that will introduce R and RStudio, how to work in 
