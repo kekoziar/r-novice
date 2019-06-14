@@ -127,9 +127,6 @@ prompt.
 >
 {: .callout}
 
-When using R as a calculator, the order of operations is the same as you
-would have learned back in school.
-
 While math is fun, it's more fun to make the math reproducable, and in order to do that we need to 
 start using variables.  
 
