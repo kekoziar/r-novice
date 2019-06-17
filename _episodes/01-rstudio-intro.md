@@ -33,9 +33,9 @@ RStudio basically provides a nicer interface to develop in R. RStudio also
 has other advantages such as integration with version control and project management.
 
 ## Who Uses R/RStudio?
-While R is open source, it’s commercial competitors include statistical packages such as 
-SAS, SPSS, and Stata.  The researchers that I've helped with R have come from the 
-fields of genomics, statistics, and plant biology.  I’ve used R for text mining, 
+While R is open source, its commercial competitors include statistical packages such as 
+SAS, SPSS, and Stata.  The researchers that I've helped with R have come from a variety of  
+fields including genomics, statistics, and plant biology.  I’ve used R for text mining, 
 machine learning, and statistics.
 
 ## This Lesson
