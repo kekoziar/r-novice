@@ -21,17 +21,24 @@ source: Rmd
 
 Welcome to the R deep dive, or I should say shallow wade because R is a pretty big 
 topic, and we won’t get far in the time we have.  I am following a modified 
-Carpentries lesson that will introduce R and RStudio, how to work in 
+Carpentries lesson that will introduce R and RStudio, and the basics of how to work in 
 R to read, store, manipulate, and save data. 
 
 ## Introduction to R and RStudio
-Welcome to R.  First, what is R?  What is RStudio?  And, How are they different?
+First, what is R?  What is RStudio?  And, How are they different?
 R is a language and environment for statistical computing and 
 graphics. It is free, and supported by the R Foundation. RStudio is a free, open source
 IDE (or integrated development environment) for R. 
 RStudio basically provides a nicer interface to develop in R. RStudio also
 has other advantages such as integration with version control and project management.
 
+## Who Uses R/RStudio?
+While R is open source, it’s commercial competitors include statistical packages such as 
+SAS, SPSS, and Stata.  The researchers that I've helped with R have come from the 
+fields of genomics, statistics, and plant biology.  I’ve used R for text mining, 
+machine learning, and statistics.
+
+## This Lesson
 Throughout this lesson, we’re going to teach you some of the fundamentals of the R 
 language as well as some best practices for organizing coding projects 
 that will make your life easier.
